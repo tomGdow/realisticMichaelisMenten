@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
+"HTMLFiles/xhtml-math11-f.dtd">
+
+<!-- Created with the Wolfram Language : www.wolfram.com -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>
+    Realistic Michaelis-Menten  
+</title>
+<link href="HTMLFiles/realistic_mm_forSO_HTML_version.css" rel="stylesheet" type="text/css" />
+<script src="//static.firebase.com/v0/firebase.js"></script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">  
+MathJax.Hub.Config({
+HTML: ["input/TeX","output/HTML-CSS"],
+TeX: { extensions: ["AMSmath.js","AMSsymbols.js"], 
+equationNumbers: { autoNumber: "AMS" } },
+extensions: ["tex2jax.js"],
+jax: ["input/TeX","output/HTML-CSS"],
+tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+processEscapes: true },
+"HTML-CSS": { availableFonts: ["TeX"],
+linebreaks: { automatic: true } }
+});
+</script>
+
+</head>
+
+<body>
+
+<p class='Title' style='text-align: center;'>
+Derivation of the Rate Law for the&nbsp;&nbsp;a Realistic, Reversible Michaelis-Menten Mechanism 
+</p>
+
+<p class='Subtitle' style='text-align: center;'>
+<br /><a href ="http://biology.stackexchange.com/a/43832/1136">http://biology.stackexchange.com/a/43832/1136</a><br />
+</p>
+
+<p class='Subsection' style='text-align: center;'>Created with Wolfram&nbsp;<a href="https://www.wolfram.com/mathematica/">Mathematica</a><p>
+<p class="Subsection">
+
+<p class="Subsection">
+1 Preliminaries
+</p>
+
+<p class="Input">
+<img src="HTMLFiles/realistic_mm_forSO_HTML_version_1.png" alt="realistic_mm_forSO_HTML_version_1.png" width="305" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+<img src="HTMLFiles/realistic_mm_forSO_HTML_version_2.png" alt="realistic_mm_forSO_HTML_version_2.png" width="207" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Subsection">
+2. Mechanism
+</p>
+<p class="Input">
+<img src="HTMLFiles/realistic_mm_forSO_HTML_version_3.png" alt="realistic_mm_forSO_HTML_version_3.png" width="282" height="62" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+<img src="HTMLFiles/realistic_mm_forSO_HTML_version_4.gif" alt="realistic_mm_forSO_HTML_version_4.gif" width="500" height="75" style="vertical-align:middle" />
+</p>
+<p class="Subsection">
+3. The Differentical Equations
+</p>
+
+<p class="Subitem"> Let $y$ be the conentration of ES</p>
+<p class="Subitem"> Let $z$ be the conentration of EP</p>
+<p class="Subitem">Let $e_o$ be the total enzyme concentration</p>
+<p class="Subitem">Therefore, the concentration of E (the 'free' enzyme concentration) equals $e_o$ - $y$ - $z$ </p>
+<p> 
+<p class="Subitem">From the steady-state assumption, the rate of formation of $y$ will equal the rate of breakdown of $y$</p>
+<p>
+$$ {dy\over dt} =  {k_{1,2}\ (e_o -y - z)\ s\ +\ k_{3,2}\ z\ -\ (k_{2,1} + k_{2,3})\ y = 0}\ \ \ \ \ \ \ (2)$$
+</p>
+<p class="Subitem">In addition, the rate of formation of $z$ will equal the rate of breakdown of $z$</p>
+<p>
+$$ {dz\over dt} =  {k_{1,3}\ (e_o -y - z)\ p\ +\ k_{2,3}\ y\ -\ (k_{3,2} + k_{3,1})\ z = 0}\ \ \ \ \ \ \ (3)$$
+</p>
+
+<p class="Subsection">
+4. Solve the Differential Equations
+</p>
+
+<p class="Subitem">
+The above differential equations may be solved using <a href ="https://www.wolfram.com/mathematica">$Mathematica$</a>.
+</p>
+<p class="Subitem">
+There are many ways to do this. Here I'll use the 'old-fashioned' method of substitution. 
+</p>
+<p class="Subitem">
+In <a href ="https://www.wolfram.com/mathematica">$Mathematica$</a> syntax:
+</p>
+
+<p class="Input">
+<img src="HTMLFiles/realistic_mm_forSO_HTML_version_5.gif" alt="realistic_mm_forSO_HTML_version_5.gif" width="478" height="62" style="vertical-align:middle" />
+</p>
+
+<p class="Subitem">
+Obtain expressions for <span style='font-style: italic;'>y</span> and <span style='font-style: italic;'>z</span> only in terms or rate-constants, <span><span><img src="HTMLFiles/realistic_mm_forSO_HTML_version_6.png" alt="realistic_mm_forSO_HTML_version_6.png" width="18" height="19" style="vertical-align:middle" /></span></span>, <span style='font-style: italic;'>s</span> and <span style='font-style: italic;'>p</span>. 
+</p>
+
+
+
+<p class="Input">
+<img src="HTMLFiles/realistic_mm_forSO_HTML_version_7.png" alt="realistic_mm_forSO_HTML_version_7.png" width="525" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+<img src="HTMLFiles/realistic_mm_forSO_HTML_version_8.png" alt="realistic_mm_forSO_HTML_version_8.png" width="856" height="40" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+<img src="HTMLFiles/realistic_mm_forSO_HTML_version_9.png" alt="realistic_mm_forSO_HTML_version_9.png" width="526" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+<img src="HTMLFiles/realistic_mm_forSO_HTML_version_10.png" alt="realistic_mm_forSO_HTML_version_10.png" width="858" height="40" style="vertical-align:middle" />
+</p>
+
+<p class="Subsection">
+5. The basic velocity equation
+</p>
+<p>
+$$ {dp\over dt} =   k_{3,1}\ z - {k_{1,3}\ (e_o -y - z)}\ p \ \ \ \ \ \ \ (4)$$
+</p>
+<p class="Subitem">
+In <a href ="https://www.wolfram.com/mathematica">$Mathematica$</a> syntax:
+</p>
+
+<p class="Input">
+<img src="HTMLFiles/realistic_mm_forSO_HTML_version_11.png" alt="realistic_mm_forSO_HTML_version_11.png" width="331" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Subsection">
+6. The kinetic constant form of the rate law. 
+</p>
+
+<p class ="Item">Using the expressions for $y$ and $z$ obtained in Section 4, an expression for the rate-constant form of
+the rate law may be obtained as follows: </p>
+
+<p class="Input">
+<img src="HTMLFiles/realistic_mm_forSO_HTML_version_12.png" alt="realistic_mm_forSO_HTML_version_12.png" width="509" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+<img src="HTMLFiles/realistic_mm_forSO_HTML_version_13.png" alt="realistic_mm_forSO_HTML_version_13.png" width="647" height="40" style="vertical-align:middle" />
+</p>
+
+<p class="Subsection">
+7. Definition of the Kinetic Constants 
+</p>
+
+<p class="Input">
+<img src="HTMLFiles/realistic_mm_forSO_HTML_version_14.png" alt="realistic_mm_forSO_HTML_version_14.png" width="214" height="46" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+<img src="HTMLFiles/realistic_mm_forSO_HTML_version_15.png" alt="realistic_mm_forSO_HTML_version_15.png" width="215" height="46" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+<img src="HTMLFiles/realistic_mm_forSO_HTML_version_16.png" alt="realistic_mm_forSO_HTML_version_16.png" width="4" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+<img src="HTMLFiles/realistic_mm_forSO_HTML_version_17.png" alt="realistic_mm_forSO_HTML_version_17.png" width="307" height="46" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+<img src="HTMLFiles/realistic_mm_forSO_HTML_version_18.png" alt="realistic_mm_forSO_HTML_version_18.png" width="4" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+<img src="HTMLFiles/realistic_mm_forSO_HTML_version_19.png" alt="realistic_mm_forSO_HTML_version_19.png" width="312" height="46" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+<img src="HTMLFiles/realistic_mm_forSO_HTML_version_20.png" alt="realistic_mm_forSO_HTML_version_20.png" width="4" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Subsection">
+8. The Kinetic Constant form of the Rate Law&nbsp;&nbsp;
+</p>
+
+
+$$ v = {
+{({{k_{cat}^f}\over{K_{m}^s}}\ s\ -{{k_{cat}^r}\over{K_{m}^p}}\ p)\ e_o }\over{1 + {{s}\over{K_{m}^s}} + {{p}\over{K_{m}^p}}}}\ \ \ \ \ (5)$$ 
+
+<p class="Subitem">
+In <a href ="https://www.wolfram.com/mathematica">$Mathematica$</a> syntax:
+</p>
+<p class="Input">
+<img src="HTMLFiles/realistic_mm_forSO_HTML_version_21.png" alt="realistic_mm_forSO_HTML_version_21.png" width="302" height="67" style="vertical-align:middle" />
+</p>
+
+<p class="Subsection">
+9. An Important Check&nbsp;&nbsp;&nbsp;
+</p>
+
+<p class="Input">
+<img src="HTMLFiles/realistic_mm_forSO_HTML_version_22.png" alt="realistic_mm_forSO_HTML_version_22.png" width="551" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+<img src="HTMLFiles/realistic_mm_forSO_HTML_version_23.png" alt="realistic_mm_forSO_HTML_version_23.png" width="38" height="17" style="vertical-align:middle" />
+</p>
+
+<div style="font-family:Helvetica; font-size:11px; width:100%; border:1px none #999999; border-top-style:solid; padding-top:2px; margin-top:20px;">
+    <a href="http://www.wolfram.com/language/" style="color:#000; text-decoration:none;">
+        <span style="color:#555555">Created with the Wolfram Language</span> 
+    </a>
+</div>
+</body>
+
+</html>
